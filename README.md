@@ -1,20 +1,20 @@
 # Automation Analyst Assessment
 # Load Shedding Management System 
-## By: Isabel Castelo
-# For: Uber / Uber Eats - EMEA
+### By: Isabel Castelo
+### For: Uber / Uber Eats - EMEA
 
-## Overview
-# This project was developed as part of a recruitment test for the Automation Analyst position at Uber Eats - EMEA. The goal is to automate the process of managing Uber Eats merchants based on load shedding status in South Africa. 
-# The solution leverages the EskomSePush API to monitor load shedding events in specific areas and temporarily closes merchants in affected zones.
+### Overview
+ This project was developed as part of a recruitment test for the Automation Analyst position at Uber Eats - EMEA. The goal is to automate the process of managing Uber Eats merchants based on load shedding status in South Africa. 
+ The solution leverages the EskomSePush API to monitor load shedding events in specific areas and temporarily closes merchants in affected zones.
 
-## Key Features:
+### Key Features:
 
 **Real-time Load Shedding Monitoring:** Fetches and processes load shedding status using GPS coordinates for each merchant.
 **Merchant Management:** Automatically closes or reopens merchants based on the current load shedding schedule.
 **Error Handling & Logging:** Robust error handling and logging mechanisms to ensure reliability and traceability.
 **Caching:** Implements caching mechanisms to reduce API calls and improve efficiency while maintaining data freshness.
 		
-## Requirements
+### Requirements
 To run this script, you'll need the following Python libraries:
 
   - pandas
@@ -29,11 +29,11 @@ You can install the non-standard libraries using pip:
 
 pip install pandas requests cachetools
 		
-##Project Structure
-  - main.py: The entry point of the application. Handles loading merchant data, iterating over merchants, and calling necessary functions to check load shedding status and update merchant status.
-  - merchant_db.py: Contains the MerchantDB class, which manages the SQLite database. This includes adding and removing merchants and logging operations.
-  - api_manager.py: Contains the LoadSheddingManager class, which interacts with the EskomSePush API to retrieve area IDs and load shedding events. It also manages the caching of API responses.
-  - logger.py: Contains utility functions for logging information and errors. Logs are written to merchant_operations.log.
+### Project Structure
+- main.py: The entry point of the application. Handles loading merchant data, iterating over merchants, and calling necessary functions to check load shedding status and update merchant status.
+- merchant_db.py: Contains the MerchantDB class, which manages the SQLite database. This includes adding and removing merchants and logging operations.
+- api_manager.py: Contains the LoadSheddingManager class, which interacts with the EskomSePush API to retrieve area IDs and load shedding events. It also manages the caching of API responses.
+- logger.py: Contains utility functions for logging information and errors. Logs are written to merchant_operations.log.
 
 ###Usage
 	To run the script, use the command line with the following arguments:
